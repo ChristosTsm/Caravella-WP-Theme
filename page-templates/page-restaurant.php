@@ -10,7 +10,7 @@ get_header();
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-        <section class="page-header-image">
+        <section data-aos="fade-in" class="page-header-image">
 
             <?php the_post_thumbnail(); ?>
 
@@ -18,11 +18,11 @@ get_header();
 
         <section class="accommodation-info">
 
-            <img class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
+            <img data-aos="fade-right" class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
 
-            <h1 class="section-title"><?php pll_e('Res<br>Taurant'); ?></h1>
+            <h1 data-aos="fade-right" data-aos-delay="100" class="section-title"><?php pll_e('Res<br>Taurant'); ?></h1>
 
-            <p><?php pll_e(get_field('restaurant_textarea')); ?></p>
+            <p data-aos="fade-left" data-aos-delay="300"><?php pll_e(get_field('restaurant_textarea')); ?></p>
 
         </section>
 
@@ -61,11 +61,11 @@ get_header();
 
                 <?php echo file_get_contents(get_template_directory_uri() . '/assets/title-background.svg'); ?>
 
-                <h2 class="section-title"><?php pll_e('Dishes'); ?></h2>
+                <h2 data-aos="fade-up" class="section-title"><?php pll_e('Dishes'); ?></h2>
 
                 <div>
 
-                    <img class="tabs-image" src="<?php the_field('dishes_background') ?>" alt="Dishes">
+                    <img data-aos="fade-up" data-aos-delay="300" class="tabs-image" src="<?php the_field('dishes_background') ?>" alt="Dishes">
 
                 </div>
 
@@ -75,7 +75,7 @@ get_header();
 
                         <?php while (have_rows('dishes')) : the_row(); ?>
 
-                            <h3 data-tab-target="#tab-<?php echo get_row_index(); ?>" class="tab-title">
+                            <h3 data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00" data-tab-target="#tab-<?php echo get_row_index(); ?>" class="tab-title">
 
                                 <img src="<?php echo get_template_directory_uri() . '/assets/chevron-down.svg' ?>" alt="">
 
@@ -83,7 +83,7 @@ get_header();
 
                             </h3>
 
-                            <div class="tab-content">
+                            <div data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00" class="tab-content">
 
                                 <p id="tab-<?php echo get_row_index(); ?>" data-tab-content> <?php the_sub_field('dish_description'); ?> </p>
 

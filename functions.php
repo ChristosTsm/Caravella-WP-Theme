@@ -147,12 +147,14 @@ function caravella_scripts()
 {
 	wp_enqueue_style('caravella-style', get_stylesheet_uri(), array(), _S_VERSION);
 	wp_enqueue_style('caravella-swiper-slider-css', 'https://unpkg.com/swiper/swiper-bundle.min.css', array(), '');
+	wp_enqueue_style('aos-css', 'https://unpkg.com/aos@next/dist/aos.css', array(), '');
 	wp_style_add_data('caravella-style', 'rtl', 'replace');
 
 
 	wp_enqueue_script('caravella-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true);
 	wp_enqueue_script('caravella-swiper-js', 'https://unpkg.com/swiper/swiper-bundle.min.js', array(), '', true);
 	wp_enqueue_script('caravella-gsap-js', 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.6.1/gsap.min.js', array(), '', true);
+	wp_enqueue_script( 'aos-js', 'https://unpkg.com/aos@next/dist/aos.js', array(), NULL, true );
 	wp_enqueue_script('caravella-custom-js', get_template_directory_uri() . '/js/custom.js', array(), '', true);
 
 	if (is_singular() && comments_open() && get_option('thread_comments')) {

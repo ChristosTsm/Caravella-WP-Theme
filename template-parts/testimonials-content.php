@@ -16,11 +16,11 @@ $the_query = new WP_Query($args);
 
                 <div class="swiper-slide">
 
-                    <h3 class="testimonial-title"><?php the_field('testimonial_title'); ?></h3>
+                    <h3  data-aos="fade-up" class="testimonial-title"><?php the_field('testimonial_title'); ?></h3>
 
-                    <h4 class="testimonial-description"><?php the_field('testimonial_description'); ?></h4>
+                    <h4 class="testimonial-description" data-aos="fade-up" data-aos-delay="300" ><?php the_field('testimonial_description'); ?></h4>
 
-                    <h5 class="testimonial-name"><?php the_field('testimonial_name'); ?></h5>
+                    <h5 class="testimonial-name" data-aos="fade-up" data-aos-delay="600" ><?php the_field('testimonial_name'); ?></h5>
 
                 </div>
 

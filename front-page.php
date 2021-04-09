@@ -10,19 +10,19 @@
 
             <div>
 
-                <img class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
+                <img class="section-title-background" data-aos="fade-in" data-aos-delay="1000" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
 
-                <h2 class="section-title"><?php pll_e('About<br>Us'); ?></h2>
+                <h2 class="section-title" data-aos="fade-right"><?php pll_e('About<br>Us'); ?></h2>
 
-                <p class="section-description"><?php pll_e(the_sub_field('about_us_textarea'), 'caravella'); ?></p>
+                <p class="section-description" data-aos="fade-right" data-aos-delay="500"><?php pll_e(the_sub_field('about_us_textarea'), 'caravella'); ?></p>
 
-                <a class="section-cta" href="#"><?php pll_e('Read More', 'caravella'); ?></a>
+                <a class="section-cta" href="#" data-aos="fade-right"><?php pll_e('Read More', 'caravella'); ?></a>
 
             </div>
 
             <div>
 
-                <img class="section-image" src="<?php esc_html_e(get_sub_field('about_us_image'), 'caravella') ?>" alt="About Us">
+                <img  data-aos="fade-left" data-aos-delay="300" class="section-image" src="<?php esc_html_e(get_sub_field('about_us_image'), 'caravella') ?>" alt="About Us">
 
             </div>
 
@@ -39,15 +39,15 @@
 
             <div>
 
-                <img class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
+                <img data-aos="fade-in" class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
 
-                <h2 class="section-title"><?php pll_e('Acco<br>mmodation'); ?></h2>
+                <h2 class="section-title" data-aos="fade-left" data-aos-delay="300"><?php pll_e('Acco<br>mmodation'); ?></h2>
 
                 <div class="text-wrapper">
 
-                    <p class="section-description"><?php the_sub_field('accommodation_textarea'); ?></p>
+                    <p class="section-description" data-aos="fade-left" data-aos-delay="400"><?php the_sub_field('accommodation_textarea'); ?></p>
 
-                    <a class="section-cta" href="#"><?php pll_e('Read More', 'caravella'); ?></a>
+                    <a class="section-cta" href="#" data-aos="fade-left" data-aos-delay="500"><?php pll_e('Read More', 'caravella'); ?></a>
 
                     <div class="cta-background"></div>
                 </div>
@@ -67,15 +67,15 @@ endif; ?>
 
             <div>
 
-                <img class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
+                <img data-aos="fade-in" class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
 
-                <h2 class="section-title"><?php pll_e('Res<br>Taurant'); ?></h2>
+                <h2 data-aos="fade-right" data-aos-delay="300" class="section-title"><?php pll_e('Res<br>Taurant'); ?></h2>
 
                 <div class="text-wrapper">
 
-                    <p class="section-description"><?php the_sub_field('restaurant_textarea'); ?></p>
+                    <p  data-aos="fade-right" data-aos-delay="500" class="section-description"><?php the_sub_field('restaurant_textarea'); ?></p>
 
-                    <a class="section-cta" href="#"><?php pll_e('Read More', 'caravella'); ?></a>
+                    <a  data-aos="fade-right" data-aos-delay="600" class="section-cta" href="#"><?php pll_e('Read More', 'caravella'); ?></a>
 
                     <div class="cta-background"></div>
 
@@ -98,7 +98,7 @@ endif; ?>
 
                 <?php echo file_get_contents(get_template_directory_uri() . '/assets/title-background.svg'); ?>
 
-                <h2 class="section-title"><?php pll_e('Lo<br>cation'); ?></h2>
+                <h2 data-aos="fade-up" class="section-title"><?php pll_e('Lo<br>cation'); ?></h2>
 
                 <?php $images = pll__(get_sub_field('location_gallery'), 'caravella'); ?>
 
@@ -134,14 +134,14 @@ endif; ?>
 
                         <?php while (have_rows('location_tabs')) : the_row(); ?>
 
-                            <h3 data-tab-target="#tab-<?php echo get_row_index(); ?>" class="tab-title">
+                            <h3 data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00" data-tab-target="#tab-<?php echo get_row_index(); ?>" class="tab-title">
                                 <img src="<?php echo get_template_directory_uri() . '/assets/chevron-down.svg' ?>" alt="">
                                 <?php the_sub_field('location_tab_title'); ?>
                             </h3>
 
                             <div class="tab-content">
 
-                                <p id="tab-<?php echo get_row_index(); ?>" data-tab-content> <?php the_sub_field('location_tab_description'); ?> </p>
+                                <p  data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00" id="tab-<?php echo get_row_index(); ?>" data-tab-content> <?php the_sub_field('location_tab_description'); ?> </p>
 
                             </div>
                     <?php endwhile;
@@ -149,7 +149,7 @@ endif; ?>
 
                     <div class="cta-wrapper">
 
-                        <a class="section-cta" href="#"><?php pll_e('Read More', 'caravella'); ?></a>
+                        <a  data-aos="fade-up" data-aos-delay="600" class="section-cta" href="#"><?php pll_e('Read More', 'caravella'); ?></a>
 
                     </div>
 
