@@ -1,0 +1,10 @@
+.location-page-slider-container {
+    .tabs-section-wrapper {
+        margin-left: 80px;
+        margin-right: 80px;
+        @media (min-width: 320px) and (max-width: 480px) {
+            grid-template-columns: 1fr;
+            margin: 0;
+        }
+    }
+}

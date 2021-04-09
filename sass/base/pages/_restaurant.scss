@@ -1,0 +1,22 @@
+#about,
+#restaurant-page {
+    
+    .tabs-image {
+        width: 100%;
+        height: 100%;
+        object-fit: fill;
+        @media (min-width: 320px) and (max-width: 480px) {
+            object-fit: cover;
+        }
+    }
+    
+    .tabs-section-wrapper {
+        grid-template-columns: 40% 60%;
+        width: 100%;
+        margin: 0 80px;
+        @media (min-width: 320px) and (max-width: 480px) {
+            grid-template-columns: 1fr;
+            margin: 0;
+        }
+    }
+}

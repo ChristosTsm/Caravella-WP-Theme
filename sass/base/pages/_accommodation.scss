@@ -1,0 +1,60 @@
+.accommodation-info {
+    display: flex;
+    align-items: center;
+    column-gap: 75px;
+    margin: 75px 0 90px;
+    @media (min-width: 320px) and (max-width: 480px) {
+        flex-wrap: wrap;
+    }
+    h1 {
+        margin-left: 145px;
+        @media (min-width: 320px) and (max-width: 480px) {
+            margin: 0 20px;
+        }
+    }
+
+    p {
+        margin-right: 145px;
+        @media (min-width: 320px) and (max-width: 480px) {
+            margin: 0 20px;
+        }
+    }
+}
+
+.appartments-wrapper {
+    margin: 0 80px 150px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    column-gap: 5px;
+    row-gap: 5px;
+    @media (min-width: 320px) and (max-width: 480px) {
+        margin: 50px 20px;
+        grid-template-columns: 1fr;
+    }
+}
+
+.apartment-single {
+    min-height: 600px;
+    width: 100%;
+    background-size: cover !important;
+    display: flex;
+    justify-content: end;
+    align-items: flex-end;
+    &__title {
+        @media (min-width: 320px) and (max-width: 480px) {
+            margin: 20px;
+        }
+        a {
+            text-transform: uppercase;
+            color: #fff;
+            margin: 0 0 20px 25px;
+            @media (min-width: 320px) and (max-width: 480px) {
+                margin: 0;
+            }
+        }
+    }
+}
+
+.not-found {
+    text-align: center;
+}

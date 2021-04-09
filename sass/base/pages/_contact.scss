@@ -1,0 +1,129 @@
+.contact-page-title {
+    position: relative;
+    min-height: 300px;
+
+    .section-title-background,
+    .section-title {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%,-50%);
+        @media (min-width: 320px) and (max-width: 480px) {
+            margin: 0;
+        }
+    }
+}
+
+.contact-info {
+    display: flex;
+    justify-content: space-around;
+    @media (min-width: 320px) and (max-width: 480px) {
+        flex-wrap: wrap;
+        margin: 0 20px;
+    }
+    h3 {
+        font-size: 30px;
+        @media (min-width: 320px) and (max-width: 480px) {
+            margin: 0;
+        }
+    }
+
+    &__single {
+        @media (min-width: 320px) and (max-width: 480px) {
+            width: 100%;
+            margin-bottom: 50px;
+        }
+    }
+
+    &__single-details {
+        display: flex;
+        align-items: center;
+        margin: 15px 0;
+        h4 {
+            letter-spacing: 2px;
+            font-weight: 400;
+            font-size: 14px;
+            margin-left: 5px;
+            @media (min-width: 320px) and (max-width: 480px) {
+                font-size: 10px;
+            }
+            a {
+                color: $color__primary-black;
+            }
+        }
+    }
+}
+
+.form {
+    width: 750px;
+    margin: 150px auto;
+    @media (min-width: 320px) and (max-width: 480px) {
+        width: 100%;
+        margin: 30px auto;
+    }
+    .wpforms-submit-container {
+        text-align: right;
+        width: 100%;
+        @media (min-width: 320px) and (max-width: 480px) {
+            margin: 0 20px !important;
+        }
+    }
+
+    .wpforms-field-container {
+        @media (min-width: 320px) and (max-width: 480px) {
+            margin: 0 20px !important;
+        }
+    }
+
+    .caravella-contact-form-btn {
+        background: none !important;
+        border: none !important;
+        padding: 0 !important;
+        font-size: 15px;
+        text-transform: uppercase;
+        padding: 5px 0;
+        color: $color__primary-black;
+        position: relative;
+        &::before {
+            content: '';
+            width: 10px;
+            height: 2px;
+            background: red;
+            position: absolute;
+            bottom: 0;
+            transition: 150ms;
+        }
+        &:hover {
+            &::before {
+                width: 5%;
+            }
+        }
+    }
+}
+
+.caravella-input {
+    textarea,
+    input {
+        background: #f5f5f5 !important;
+        border: none !important;
+        &::placeholder {
+            color: #C4C4C4 !important;
+          }
+    }
+
+}
+
+.map {
+    margin: 125px 0;
+    @media (min-width: 320px) and (max-width: 480px) {
+        margin: 30px 0;
+        height: 300px;
+    }
+    img {
+        width: 100%;
+        @media (min-width: 320px) and (max-width: 480px) {
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+}

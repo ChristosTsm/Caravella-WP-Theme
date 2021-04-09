@@ -1,0 +1,12 @@
+body {
+	background: $color__background-body; // Fallback for when there is no custom background color defined.
+	overflow-x: hidden;
+	@media (min-width: 320px) and (max-width: 480px) {
+		overflow-x: hidden; 
+	}
+}
+
+
+a {
+	text-decoration: none;
+}

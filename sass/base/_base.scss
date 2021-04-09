@@ -1,0 +1,250 @@
+/* Typography
+--------------------------------------------- */
+@import "typography/typography";
+
+/* Elements
+--------------------------------------------- */
+@import "elements/body";
+@import "elements/hr";
+@import "elements/lists";
+@import "elements/media";
+@import "elements/tables";
+
+/* Links
+--------------------------------------------- */
+@import "elements/links";
+
+/* Forms
+--------------------------------------------- */
+@import "elements/buttons";
+@import "elements/fields";
+
+/* Pages
+--------------------------------------------- */
+@import "pages/homepage";
+@import "pages/accommodation";
+@import "pages/apartment-single";
+@import "pages/restaurant";
+@import "pages/location";
+@import "pages/contact";
+
+.page-header-image {
+    width: 100%;
+    height: 700px;
+    img {
+        width: 100%;
+        height: 700px;
+        object-fit: cover;
+    }
+}
+
+#header-slider{
+    max-width: 100%;
+    overflow: hidden;
+}
+
+#restaurant-page,
+#about,
+#restaurant,
+#location {
+    position: relative;
+    z-index: 1;
+    margin: 200px 0;
+
+    .title-wrapper {
+        text-align: center;
+    }
+
+    .tabs-section-wrapper {
+        display: grid;
+        grid-template-columns: 40% 100%;
+        align-items: center;
+        @media (min-width: 320px) and (max-width: 480px) {
+            grid-template-columns: 1fr;   
+        }
+        & > div {
+            overflow: hidden;
+            height: 720px;
+        }
+    }
+
+    .swiper-container-locations {
+        width: 100%;
+        height: 100%;
+        position: relative;
+        .swiper-pagination-bullets {
+            position: absolute;
+            top: 90%;
+            left: 48%;
+            z-index: 3;
+            @media (min-width: 320px) and (max-width: 480px) {
+                width: 100%;
+                left: 0;
+                text-align: center;
+            }
+           .swiper-pagination-bullet {
+               background: #fff;
+           }
+        }
+    }
+  
+    .swiper-slide {
+        img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+
+    .section-title {
+        position: absolute;
+        top: -15px;
+        left: 37%;
+        @media (min-width: 320px) and (max-width: 480px) {
+            left: 50%;
+            top: -65px;
+            margin: 0;
+            transform: translateX(-50%);
+        }
+    }
+
+    svg {
+        position: absolute;
+        top: 30px;
+        left: 42%;
+        transform: translateX(-50%);
+        z-index: 2;
+        @media (min-width: 320px) and (max-width: 480px) {
+            top: -45px;
+            left: 50%;
+            width: 100%;
+        }
+    }
+
+    .active-tab[data-tab-content]  {
+        display: block;
+    }
+
+    [data-tab-content] {
+        display: none;
+        font-size: 14px;
+        font-weight: 400;
+    }
+
+    .tab-content {
+        margin-bottom: 50px;
+    }
+}
+
+.tabs {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    margin-left: 30px;
+    overflow: initial !important;
+    height: 100% !important;
+    @media (min-width: 320px) and (max-width: 480px) {
+        margin: 20px;
+    }
+    h3 {
+        display: flex;
+        align-items: center;
+        cursor: pointer;
+        text-transform: uppercase;
+        font-size: 20px;
+        img {
+            margin-right: 5px;
+        }
+    }
+
+}
+
+.tab-content {
+    position: relative;
+    z-index: 5;
+    p {
+        display: inline;
+        background: #f5f5f5;
+        max-width: 500px;
+        margin-left: -100px;
+        padding: 25px;
+        font-size: 16px;
+        @media (min-width: 320px) and (max-width: 480px) {
+            width: 100%;
+            margin: 0;
+        }
+    }
+}
+
+.grid-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    @media (min-width: 320px) and (max-width: 480px) {
+        grid-template-columns: 1fr;             
+    }
+}
+
+section {
+    position: relative;
+    @media (min-width: 320px) and (max-width: 480px) {
+        max-width: 100%;           
+    }
+}
+
+.section-title {
+    font-size: 70px;
+    line-height: 1.2;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2;
+    @media (min-width: 320px) and (max-width: 480px) {
+        font-size: 50px;  
+        margin: 0 20px;      
+    }
+}
+
+.section-description {
+    padding: 50px;
+    font-size: 1em;
+}
+
+.section-image {
+    width: 100%;
+}
+
+.section-title-background {
+    width: 512px;
+    position: absolute;
+    z-index: 1;
+    top: 10px;
+    left: -35px;
+    height: 85px;
+}
+
+.section-cta {
+    position: relative;
+    font-size: 15px;
+    text-transform: uppercase;
+    padding: 5px 0;
+    font-weight: 600;
+    color: $color__primary-black;
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 24%;
+        background: red;
+        height: 2px;
+        transition: 150ms;
+    }
+
+    &:hover {
+        color: $color__primary-black;
+        &::before {
+            width: 100%;
+        }
+    }
+}
+
