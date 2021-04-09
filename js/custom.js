@@ -99,34 +99,25 @@ if (document.querySelector('#burger-menu')) {
 	nav_tl = gsap.timeline();
 
 	let burger_open = document.querySelector('#burger-menu');
-	let burger_close = document.querySelector('#burger-menu-close');
+	// let burger_close = document.querySelector('#burger-menu-close');
 	let menu = document.querySelector('#navigation-container');
 
-	burger_open.addEventListener('click', () => {
-		nav_tl.to(burger_open, {
-			x: -500,
-			opacity: 0,
-			display: 'none'
-		})
-		nav_tl.to(burger_close, {
-			display: 'block',
-			opacity: 1,
-			y: 0
-		})
-		nav_tl.to(menu , {
-			y:0
-		})
-		nav_tl.to('.site-info svg', {
-			fill: '#333'
-		})
-		nav_tl.to('.language-switcher select', {
-			color: "#333"
-		},'-=1')
-		nav_tl.play();
+	nav_tl.to(menu , {
+		y:0
 	})
+	nav_tl.to('.site-info svg', {
+		fill: '#333'
+	})
+	nav_tl.to('.language-switcher select', {
+		color: "#333"
+	},'-=1')
+	.reverse()
 
-	burger_close.addEventListener('click', () => {
-		nav_tl.reverse();
+	nav_tl.pause();
+
+	burger_open.addEventListener('click', () => {
+		console.log('clicked')
+		nav_tl.reversed() ? nav_tl.play() : nav_tl.reverse()
 	})
 }
 

@@ -197,32 +197,15 @@ require get_template_directory() . '/inc/custom-post-types.php';
 /**
  * ACF Theme Options Page.
  */
-if (function_exists('acf_add_options_page')) {
-
-	acf_add_options_page(array(
-		'page_title' 	=> 'Theme Settings',
-		'menu_title'	=> 'Theme Settings',
-		'menu_slug' 	=> 'theme-settings',
-		'capability'	=> 'edit_posts',
-		'redirect'		=> false
-	));
-}
+require get_template_directory() . '/inc/acf-options-page.php';
 
 
-add_action('init', function () {
-	pll_register_string('About<br>Us', 'About<br>Us', 'Caravella', false);
-	pll_register_string('ReserveNow', 'Reserve Now', 'Caravella', false);
-	pll_register_string('ReadMore', 'Read More', 'Caravella', false);
-	pll_register_string('Lo<br>cation', 'Lo<br>cation', 'Caravella', false);
-	pll_register_string('Acco<br>mmodation', 'Acco<br>mmodation', 'Caravella', false);
-	pll_register_string('Tel.', 'Tel.', 'Caravella', false);
-	pll_register_string('Res<br>Taurant', 'Res<br>Taurant', 'Caravella', false);
-	pll_register_string('Social<br>Media', 'Social<br>Media', 'Caravella', false);
-	pll_register_string('Apart<br>Ments', 'Apart<br>Ments', 'Caravella', false);
-	pll_register_string('Apartments', 'Apartments', 'Caravella', false);
-	pll_register_string('Apartment', 'Apartment', 'Caravella', false);
-	pll_register_string('Minimal<br>Decoration', 'Minimal<br>Decoration', 'Caravella', false);
-	pll_register_string('Bene<br>fits', 'Bene<br>fits', 'Caravella', false);
-	pll_register_string('Dishes', 'Dishes', 'Caravella', false);
-	pll_register_string('Palaio<br>chora', 'Palaio<br>chora', 'Caravella', false);
-});
+/**
+ * Load Apartments Custom Post Type.
+ */
+require get_template_directory() . '/inc/svg-support.php';
+
+/**
+ * Load String Translations
+ */
+require get_template_directory() . '/inc/string-translation.php';

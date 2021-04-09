@@ -31,10 +31,10 @@
 
 			<div class="burger">
 
-				<img id="burger-menu" src="<?php echo get_template_directory_uri() . '/assets/burger.svg' ?>" alt="burger menu">
-
-				<img id="burger-menu-close" src="<?php echo get_template_directory_uri() . '/assets/burger-close.svg' ?>" alt="burger menu">
-
+				<div id="burger-menu">
+					<?php echo file_get_contents( get_template_directory_uri() . '/assets/burger-menu.svg' ); ?>
+				</div>
+				
 			</div>
 
 			<div id="navigation-container">
@@ -76,7 +76,9 @@
 
 				<?php echo file_get_contents(get_template_directory_uri() . '/assets/phone.svg') ?>
 
-				<a href="#" class="caravella-btn-primary"><?php pll_e('Reserve Now', 'caravella'); ?></a>
+				<a class="btn-reserve-now" href="#">
+					<?php pll_e('Reserve Now', 'caravella'); ?>
+				</a>
 
 			</div>
 

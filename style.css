@@ -578,6 +578,27 @@ input[type="submit"]:focus {
 	color: #fff;
 }
 
+.btn-reserve-now {
+	text-transform: uppercase;
+	color: #fff;
+	background-color: #161f86;
+	box-shadow: inset 0 0 0 0 #fff;
+	transition: 150ms;
+	outline: none;
+	width: 150px;
+	height: 60px;
+	cursor: pointer;
+	border: none;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+.btn-reserve-now:hover {
+	box-shadow: inset 150px 0 0 0 #fff;
+	color: #161f86 !important;
+}
+
 input[type="text"],
 input[type="email"],
 input[type="url"],
@@ -1962,6 +1983,26 @@ section {
 	#navigation-container img {
 		display: none;
 	}
+}
+
+#burger-menu {
+	width: 70px;
+	height: 60px;
+	background-color: #161f86;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-shadow: inset 0 0 0 0 #fff;
+	cursor: pointer;
+	transition: ease-in-out 150ms;
+}
+
+#burger-menu:hover {
+	box-shadow: inset 70px 0 0 0 #fff;
+}
+
+#burger-menu:hover line {
+	stroke: #161f86 !important;
 }
 
 #burger-menu-close {
