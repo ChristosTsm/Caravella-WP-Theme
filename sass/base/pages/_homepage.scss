@@ -24,9 +24,13 @@
             margin-left: 100px;
             text-transform: uppercase;
             font-weight: 400;
-            @media (min-width: 320px) and (max-width: 480px) {
+            @media (min-width: $mobile-min) and (max-width: $mobile-max) {
                 margin-left: 20px;
                 font-size: 24px;                                
+            }
+            @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+                margin-left: 20px;
+                font-size: 52px;                                
             }
         }
         span {
@@ -39,7 +43,8 @@
         text-align: left !important;
         margin-left: 100px;
         margin-bottom: 65px;
-        @media (min-width: 320px) and (max-width: 480px) {
+		z-index: 2;
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
             margin-left: 20px;
             margin-bottom: 40px;                     
         }
@@ -65,8 +70,8 @@
     position: relative;
     margin-top: 70px;
     margin-bottom: 70px;
-    @media (min-width: 320px) and (max-width: 480px) {
-        margin: 50px 20px;               
+    @media (min-width: $mobile-min) and (max-width: $tablet-max) {
+        margin: 50px 0;               
     }
     .section-description {
         margin-left: 45px;
@@ -75,21 +80,27 @@
         padding: 100px 30px;
         line-height: 2;
         background: #F5F5F5;
-        @media (min-width: 320px) and (max-width: 480px) {
-            margin-left: 0;          
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+            margin-left: 0; 
+			padding: 100px 20px 30px;         
         }
     }
+	& > div:nth-child(1) {
+		@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+            margin-bottom: 50px;      
+        }
+	}
     & > div {
         position: relative;
         z-index: 3;
-        @media (min-width: 320px) and (max-width: 480px) {
-            margin-bottom: 50px;      
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+            margin-bottom: 0;      
         }
     }
     & div:nth-child(2) {
         margin-left: -100px;
         z-index: 1;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
             width: 100%;
             margin-left: 0;
         }
@@ -97,8 +108,8 @@
 
     .section-cta {
         margin: 35px 0 0 125px;
-        @media (min-width: 320px) and (max-width: 480px) {
-            margin: 0;      
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+            margin: 0 20px;    
         }
     }
 }
@@ -116,7 +127,7 @@
         width: 560px;
         margin-left: auto;
         margin-right: 75px;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
             width: 100%;         
         }
     }
@@ -129,7 +140,7 @@
         padding: 0 0 50px;
         text-align: center;
         position: relative;
-        @media (min-width: 320px) and (max-width: 480px) {        
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {        
             margin: 0 auto;
             width: 90%;
         }
@@ -145,7 +156,7 @@
         top: 70px;
         left: -150px;
         height: 100px;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
            left:0;     
         }
     }
@@ -165,6 +176,12 @@
     }
 }
 
+#accommodation {
+	@media (min-width: $mobile-min) and (max-width: $mobile-max) {
+		margin: 150px 0;    
+	}
+}
+
 #restaurant,
 #about {
     margin: 250px 0 130px 0;
@@ -175,6 +192,11 @@
         margin-right: auto;
         margin-left: 100px;
     }
+	.restaurant-wrapper {
+		@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+			margin-left: 0; 
+		}
+	}
     .text-wrapper {
         width: 70%;
         margin-top: -30px;
@@ -182,7 +204,7 @@
         padding: 0 0 50px;
         text-align: center;
         position: relative;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
             width: 90%;  
         }
     }
@@ -218,12 +240,12 @@
     background-size: cover !important;
     min-height: 750px;
     @extend #accommodation;
-    @media (min-width: 320px) and (max-width: 480px) {
+    @media (min-width: $mobile-min) and (max-width: $mobile-max) {
         min-height: 850px;
     }
     &>div {
         transform: translateY(45px);
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
             margin: 0;
             width: 100%;
         }
@@ -239,7 +261,7 @@
         position: absolute;
         top: -160px !important;
         left: 155px !important;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
             left: 0 !important;
             top: -150px !important;
             transform: translateX(0) !important;
@@ -251,7 +273,7 @@
 #testimonials {
     margin: 0 300px 150px;
     position: relative;
-    @media (min-width: 320px) and (max-width: 480px) {
+    @media (min-width: $mobile-min) and (max-width: $tablet-max) {
         margin: 50px 20px;         
     }
     .swiper-slide {
@@ -261,7 +283,7 @@
     .section-title {
         width: 300px;
         margin: 0 auto 80px;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
             margin: 50px 0; 
         }
     }
@@ -271,7 +293,7 @@
         top: 45px;
         left: 50%;
         transform: translateX(-50%);
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
             top: 15px;    
             width: 100%;
         }
@@ -305,9 +327,14 @@
     grid-template-columns: 25% 1fr;
     justify-content: center;
     align-items: center;
-    @media (min-width: 320px) and (max-width: 480px) {
+    @media (min-width: $mobile-min) and (max-width: $mobile-max) {
         grid-template-columns: 1fr;
         margin: 0; 
+    }
+    @media (min-width: $tablet-min) and (max-width: $tablet-max) {
+        grid-template-columns: 1fr;
+		row-gap: 50px;
+        margin: 20px; 
     }
     .footer-col-1 {
         display: flex;
@@ -316,7 +343,7 @@
         justify-content: center;
         border-right: 2px solid $color__primary-red;
         height: 100%;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $tablet-max) {
             border-right: none;
             
         }
@@ -328,7 +355,7 @@
         }
         .copyrights {
             margin-top: 135px;
-            @media (min-width: 320px) and (max-width: 480px) {
+            @media (min-width: $mobile-min) and (max-width: $tablet-max) {
                 margin-top: 50px;
             }
         }
@@ -339,14 +366,14 @@
         flex-direction: column;
         height: 100%;
         justify-content: space-between;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $tablet-max) {
             grid-row: 1;
         }
         &-details {
             display: flex;
             align-items: center;
             padding: 10px;
-            @media (min-width: 320px) and (max-width: 480px) {
+            @media (min-width: $mobile-min) and (max-width: $tablet-max) {
                 flex-wrap: wrap;
             }
 
@@ -354,7 +381,7 @@
                 font-size: 30px;
                 text-transform: uppercase;
                 margin-left: 75px;
-                @media (min-width: 320px) and (max-width: 480px) {
+                @media (min-width: $mobile-min) and (max-width: $tablet-max) {
                     margin-left: 0;
                 }
             }
@@ -362,7 +389,7 @@
             h4 {
                 font-size: 14px;
                 font-weight: 400;
-                @media (min-width: 320px) and (max-width: 480px) {
+                @media (min-width: $mobile-min) and (max-width: $tablet-max) {
                     font-size: 10px;
                     flex: 1;
                 }
@@ -374,7 +401,7 @@
 
             img {
                 margin-right: 15px;
-                @media (min-width: 320px) and (max-width: 480px) {
+                @media (min-width: $mobile-min) and (max-width: $tablet-max) {
                     margin-right: 5px;
                 }
             }
@@ -384,6 +411,9 @@
                 background: url(./assets/footer-title-bg.svg) no-repeat;
                 background-position: bottom;
                 background-size: contain;
+				@media (min-width: $tablet-min) and (max-width: $tablet-max) {
+					min-width: 170px;
+				}
             }
 
             &__fields {

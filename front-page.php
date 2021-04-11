@@ -65,7 +65,7 @@ endif; ?>
 
         <section id="restaurant" style="background: url(<?php esc_html_e(get_sub_field('restaurant_background_image'), 'caravella'); ?>) no-repeat;">
 
-            <div>
+            <div class="restaurant-wrapper">
 
                 <img data-aos="fade-in" class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
 

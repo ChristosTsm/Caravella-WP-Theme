@@ -25,6 +25,8 @@ get_header();
 
             </div>
 
+			<section class="caravella-page-slider-wrapper">
+
             <div class="swiper-container-apartment-single">
 
                 <div class="swiper-wrapper">
@@ -52,6 +54,8 @@ get_header();
                 <div class="swiper-button-prev"></div>
 
             </div>
+
+			</section>
 
         </main>
 

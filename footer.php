@@ -55,7 +55,7 @@
 
 					<img src="<?php echo get_template_directory_uri() . '/assets/location.svg' ?>" alt="Location">
 
-					<h4><?php the_field('address', 'option'); ?></h4>
+					<h4><a target="_blank" href="http://maps.google.com/?q=<?php the_field('address','option'); ?>" ><?php the_field('address', 'option'); ?></a></h4>
 
 				</div>
 
@@ -63,7 +63,7 @@
 
 					<img src="<?php echo get_template_directory_uri() . '/assets/tel.svg' ?>" alt="Location">
 
-					<h4><?php pll_e('Tel.', 'caravella'); ?> <?php the_field('tel', 'option'); ?> / <?php the_field('mobile', 'option'); ?></h4>
+					<h4><?php pll_e('Tel.', 'caravella'); ?><a href="tel:<?php the_field('tel','option'); ?>"><?php the_field('tel', 'option'); ?></a> / <a href="tel:<?php the_field('mobile','option'); ?>"><?php the_field('mobile', 'option'); ?></a></h4>
 
 				</div>
 
@@ -71,7 +71,7 @@
 
 					<img src="<?php echo get_template_directory_uri() . '/assets/email.svg' ?>" alt="Location">
 
-					<h4><?php the_field('email', 'option'); ?></h4>
+					<h4><a href="mailto:<?php the_field('email','option'); ?>"><?php the_field('email', 'option'); ?></a></h4>
 
 				</div>
 
@@ -93,7 +93,7 @@
 
 					<img src="<?php echo get_template_directory_uri() . '/assets/location.svg' ?>" alt="Location">
 
-					<h4><?php the_field('address', 'option'); ?></h4>
+					<h4><a target="_blank" href="http://maps.google.com/?q=<?php the_field('address','option'); ?>" ><?php the_field('address', 'option'); ?></a></h4>
 
 				</div>
 
@@ -101,7 +101,7 @@
 
 					<img src="<?php echo get_template_directory_uri() . '/assets/tel.svg' ?>" alt="Location">
 
-					<h4><?php _e('Tel.', 'caravella'); ?> <?php the_field('tel', 'option'); ?> / <?php the_field('mobile', 'option'); ?></h4>
+					<h4><?php pll_e('Tel.', 'caravella'); ?><a href="tel:<?php the_field('tel','option'); ?>"><?php the_field('tel', 'option'); ?></a> / <a href="tel:<?php the_field('mobile','option'); ?>"><?php the_field('mobile', 'option'); ?></a></h4>
 
 				</div>
 

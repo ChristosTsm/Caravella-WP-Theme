@@ -26,33 +26,37 @@ get_header();
 
         </section>
 
-        <div class="swiper-container restaurant-slider">
+		<section class="caravella-page-slider-wrapper">
 
-            <div class="swiper-wrapper">
+			<div class="swiper-container restaurant-slider">
 
-                <?php $images = get_field('slider_gallery') ?>
+				<div class="swiper-wrapper">
 
-                <?php foreach ($images as $image) : ?>
+					<?php $images = get_field('slider_gallery') ?>
 
-                    <div class="swiper-slide">
+					<?php foreach ($images as $image) : ?>
 
-                        <img class="apartment-slider-image" src="<?php echo $image; ?>" alt="slider-image">
+						<div class="swiper-slide">
 
-                    </div>
+							<img class="apartment-slider-image" src="<?php echo $image; ?>" alt="slider-image">
 
-                <?php endforeach; ?>
+						</div>
 
-            </div>
+					<?php endforeach; ?>
 
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+				</div>
 
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
 
-            <div class="swiper-button-prev"></div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
 
-        </div>
+				<div class="swiper-button-prev"></div>
+
+			</div>
+
+		</section>
 
 
         <section id="restaurant-page">

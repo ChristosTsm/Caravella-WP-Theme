@@ -74,7 +74,7 @@
 
 				<ul class="language-switcher"><?php pll_the_languages(array('dropdown' => 1, 'raw' => $raw)); ?></ul>
 
-				<?php echo file_get_contents(get_template_directory_uri() . '/assets/phone.svg') ?>
+				<a href="tel:<?php the_field('mobile', 'option') ?>" ><?php echo file_get_contents(get_template_directory_uri() . '/assets/phone.svg') ?></a>
 
 				<a class="btn-reserve-now" href="#">
 					<?php pll_e('Reserve Now', 'caravella'); ?>

@@ -13,7 +13,7 @@ function scrollFunction() {
 if(AOS) {
 	AOS.init({
 		// Global settings:
-		disable: false, // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
+		disable: 'mobile', // accepts following values: 'phone', 'tablet', 'mobile', boolean, expression or function
 		startEvent: 'DOMContentLoaded', // name of the event dispatched on the document, that AOS should initialize on
 		initClassName: 'aos-init', // class applied after initialization
 		animatedClassName: 'aos-animate', // class applied on animation
@@ -141,7 +141,6 @@ if (document.querySelector('#burger-menu')) {
 	nav_tl.pause();
 
 	burger_open.addEventListener('click', () => {
-		console.log('clicked')
 		nav_tl.reversed() ? nav_tl.play() : nav_tl.reverse()
 	})
 }
@@ -153,12 +152,17 @@ if (document.querySelector('[data-tab-target]')) {
 	const tabContents = document.querySelectorAll('[data-tab-content]')
 
 	tabContents[0].classList.add('active-tab');
+	tabs[0].firstElementChild.classList.add('rotate-tab-indicator');
 
 	tabs.forEach( tab => {
 		tab.addEventListener('click', () => {
 			const target = document.querySelector(tab.dataset.tabTarget)
-			tabContents.forEach( tabContent => tabContent.classList.remove('active-tab'))
+			tabContents.forEach( tabContent => {
+				tabContent.classList.remove('active-tab')
+				tabContent.parentElement.previousElementSibling.firstElementChild.classList.remove('rotate-tab-indicator');
+			})
 			target.classList.add('active-tab')
+			tab.firstElementChild.classList.add('rotate-tab-indicator')
 		})
 	})
 

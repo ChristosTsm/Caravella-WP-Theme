@@ -10,7 +10,7 @@ get_header();
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-        <section class="page-header-image">
+        <section data-aos="fade-in" class="page-header-image">
 
             <?php the_post_thumbnail(); ?>
 
@@ -18,42 +18,45 @@ get_header();
 
         <section class="accommodation-info">
 
-            <img class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
+            <img data-aos="fade-in" class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
 
-            <h1 class="section-title"><?php pll_e('Lo<br>cation'); ?></h1>
+            <h1 data-aos="fade-right" data-aos-delay="300" class="section-title"><?php pll_e('Lo<br>cation'); ?></h1>
 
-            <p><?php pll_e(get_field('location_textearea')); ?></p>
+            <p data-aos="fade-left" data-aos-delay="600"><?php pll_e(get_field('location_textearea')); ?></p>
 
         </section>
 
-        <div class="swiper-container restaurant-slider">
+		<section class="caravella-page-slider-wrapper">
 
-            <div class="swiper-wrapper">
+			<div  data-aos="fade-in" class="swiper-container restaurant-slider">
 
-                <?php $images = get_field('slider_gallery') ?>
+				<div class="swiper-wrapper">
 
-                <?php foreach ($images as $image) : ?>
+					<?php $images = get_field('slider_gallery') ?>
 
-                    <div class="swiper-slide">
+					<?php foreach ($images as $image) : ?>
 
-                        <img class="apartment-slider-image" src="<?php echo $image; ?>" alt="slider-image">
+						<div class="swiper-slide">
 
-                    </div>
+							<img class="apartment-slider-image" src="<?php echo $image; ?>" alt="slider-image">
 
-                <?php endforeach; ?>
+						</div>
 
-            </div>
+					<?php endforeach; ?>
 
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+				</div>
 
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
 
-            <div class="swiper-button-prev"></div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
 
-        </div>
+				<div class="swiper-button-prev"></div>
 
+			</div>
+
+		</section>
 
 
         <section id="location" class="location-page-slider-container">
@@ -66,11 +69,11 @@ get_header();
 
                         <?php echo file_get_contents(get_template_directory_uri() . '/assets/title-background.svg'); ?>
 
-                        <h2 class="section-title"><?php pll_e('Palaio<br>chora'); ?></h2>
+                        <h2  data-aos="fade-up" data-aos-delay="300" class="section-title"><?php pll_e('Palaio<br>chora'); ?></h2>
 
                         <?php $images = pll__(get_sub_field('location_gallery'), 'caravella'); ?>
 
-                        <div>
+                        <div  data-aos="fade-right" data-aos-delay="600">
 
                             <div class="swiper-container-locations">
 
@@ -102,12 +105,12 @@ get_header();
 
                                 <?php while (have_rows('location_tabs')) : the_row(); ?>
 
-                                    <h3 data-tab-target="#tab-<?php echo get_row_index(); ?>" class="tab-title">
-                                        <img src="<?php echo get_template_directory_uri() . '/assets/chevron-down.svg' ?>" alt="">
+                                    <h3 data-aos="fade-up" data-aos-delay="<?php echo get_row_index() ?>00" data-tab-target="#tab-<?php echo get_row_index(); ?>" class="tab-title">
+                                        <img  src="<?php echo get_template_directory_uri() . '/assets/chevron-down.svg' ?>" alt="">
                                         <?php the_sub_field('location_tab_title'); ?>
                                     </h3>
 
-                                    <div class="tab-content">
+                                    <div data-aos="fade-up" data-aos-delay="<?php echo get_row_index() ?>00" class="tab-content">
 
                                         <p id="tab-<?php echo get_row_index(); ?>" data-tab-content> <?php the_sub_field('location_tab_description'); ?> </p>
 
@@ -115,7 +118,7 @@ get_header();
                             <?php endwhile;
                             endif; ?>
 
-                            <div class="cta-wrapper">
+                            <div data-aos="fade-up" data-aos-delay="<?php echo get_row_index() ?>00" class="cta-wrapper">
 
                                 <a class="section-cta" href="#"><?php pll_e('Read More', 'caravella'); ?></a>
 

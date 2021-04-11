@@ -11,17 +11,17 @@ get_header();
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-        <section class="page-header-image">
+        <section data-aos="fade-in" class="page-header-image">
 
             <?php the_post_thumbnail(); ?>
 
         </section>
 
-        <section class="contact-page-title">
+        <section class="contact-page-title" data-aos="fade-up" data-aos-delay="300">
 
-            <img class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
+            <img  class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
 
-            <h1 class="section-title"><?php pll_e('Co<br>Ntact'); ?></h1>
+            <h1  class="section-title"><?php pll_e('Co<br>Ntact'); ?></h1>
 
         </section>
 
@@ -29,7 +29,7 @@ get_header();
 
             <section class="contact-info">
 
-                <div class="contact-info__single">
+                <div data-aos="fade-right" data-aos-delay="300" class="contact-info__single">
 
                     <h3 class="section-title"><?php pll_e('Apart<br>Ments'); ?></h3>
 
@@ -37,7 +37,7 @@ get_header();
 
                         <img src="<?php echo get_template_directory_uri() . '/assets/location.svg' ?>" alt="Location">
 
-                        <h4><?php the_field('address', 'option'); ?></h4>
+						<h4><a target="_blank" href="http://maps.google.com/?q=<?php the_field('address','option'); ?>" ><?php the_field('address', 'option'); ?></a></h4>
 
                     </div>
 
@@ -45,7 +45,7 @@ get_header();
 
                         <img src="<?php echo get_template_directory_uri() . '/assets/tel.svg' ?>" alt="Location">
 
-                        <h4><?php pll_e('Tel.', 'caravella'); ?> <?php the_field('tel', 'option'); ?> / <?php the_field('mobile', 'option'); ?></h4>
+                        <h4><?php pll_e('Tel.', 'caravella'); ?><a href="tel:<?php the_field('tel','option'); ?>"><?php the_field('tel', 'option'); ?></a> / <a href="tel:<?php the_field('mobile','option'); ?>"><?php the_field('mobile', 'option'); ?></a></h4>
 
                     </div>
 
@@ -53,13 +53,13 @@ get_header();
 
                         <img src="<?php echo get_template_directory_uri() . '/assets/email.svg' ?>" alt="Location">
 
-                        <h4><?php the_field('email', 'option'); ?></h4>
+                        <h4><a href="mailto:<?php the_field('email','option'); ?>"><?php the_field('email', 'option'); ?></a></h4>
 
                     </div>
 
                 </div>
 
-                <div class="contact-info__single">
+                <div data-aos="fade-up" data-aos-delay="600" class="contact-info__single">
 
                     <h3 class="section-title"><?php pll_e('Res<br>Taurant'); ?></h3>
 
@@ -67,7 +67,7 @@ get_header();
 
                         <img src="<?php echo get_template_directory_uri() . '/assets/location.svg' ?>" alt="Location">
 
-                        <h4><?php the_field('address', 'option'); ?></h4>
+                        <h4><a target="_blank" href="http://maps.google.com/?q=<?php the_field('address','option'); ?>" ><?php the_field('address', 'option'); ?></a></h4>
 
                     </div>
 
@@ -75,13 +75,13 @@ get_header();
 
                         <img src="<?php echo get_template_directory_uri() . '/assets/tel.svg' ?>" alt="Location">
 
-                        <h4><?php _e('Tel.', 'caravella'); ?> <?php the_field('tel', 'option'); ?> / <?php the_field('mobile', 'option'); ?></h4>
+                        <h4><?php pll_e('Tel.', 'caravella'); ?><a href="tel:<?php the_field('tel','option'); ?>"><?php the_field('tel', 'option'); ?></a> / <a href="tel:<?php the_field('mobile','option'); ?>"><?php the_field('mobile', 'option'); ?></a></h4>
 
                     </div>
 
                 </div>
 
-                <div class="contact-info__single">
+                <div data-aos="fade-left" data-aos-delay="900" class="contact-info__single">
 
                     <h3 class="section-title"><?php pll_e('Social<br>Media'); ?></h3>
 
@@ -106,13 +106,13 @@ get_header();
 
             </section>
 
-            <section class="form">
+            <section class="form" data-aos="fade-up" data-aos-delay="600">
 
                 <?php echo do_shortcode('[wpforms id="224"]') ?>
 
             </section>
 
-            <section class="map">
+            <section class="map" data-aos="fade-up">
 
                 <img src="<?php the_field('map_image') ?>" alt="Map">
 

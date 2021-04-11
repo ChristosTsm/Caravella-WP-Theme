@@ -3,19 +3,20 @@
     align-items: center;
     column-gap: 75px;
     margin: 75px 0 90px;
-    @media (min-width: 320px) and (max-width: 480px) {
+    @media (min-width: $mobile-min) and (max-width: $tablet-max) {
         flex-wrap: wrap;
+		margin: 50px 0;
     }
     h1 {
         margin-left: 145px;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $tablet-max) {
             margin: 0 20px;
         }
     }
 
     p {
         margin-right: 145px;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $tablet-max) {
             margin: 0 20px;
         }
     }
@@ -27,7 +28,7 @@
     grid-template-columns: repeat(3, 1fr);
     column-gap: 5px;
     row-gap: 5px;
-    @media (min-width: 320px) and (max-width: 480px) {
+    @media (min-width: $mobile-min) and (max-width: $tablet-max) {
         margin: 50px 20px;
         grid-template-columns: 1fr;
     }
@@ -41,14 +42,14 @@
     justify-content: end;
     align-items: flex-end;
     &__title {
-        @media (min-width: 320px) and (max-width: 480px) {
+		margin: 25px;
+        @media (min-width: $mobile-min) and (max-width: $tablet-max) {
             margin: 20px;
         }
         a {
             text-transform: uppercase;
             color: #fff;
-            margin: 0 0 20px 25px;
-            @media (min-width: 320px) and (max-width: 480px) {
+            @media (min-width: $mobile-min) and (max-width: $tablet-max) {
                 margin: 0;
             }
         }

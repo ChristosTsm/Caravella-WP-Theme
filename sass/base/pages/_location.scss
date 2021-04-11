@@ -2,7 +2,11 @@
     .tabs-section-wrapper {
         margin-left: 80px;
         margin-right: 80px;
-        @media (min-width: 320px) and (max-width: 480px) {
+        @media (min-width: $mobile-min) and (max-width: $mobile-max) {
+            grid-template-columns: 1fr;
+            margin: 0;
+        }
+        @media (min-width: $tablet-min) and (max-width: $tablet-max) {
             grid-template-columns: 1fr;
             margin: 0;
         }

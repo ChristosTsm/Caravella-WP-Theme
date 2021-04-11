@@ -10,7 +10,7 @@ get_header();
 
 <?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-        <section class="page-header-image">
+        <section data-aos="fade-in" class="page-header-image">
 
             <?php the_post_thumbnail(); ?>
 
@@ -18,54 +18,56 @@ get_header();
 
         <section class="accommodation-info">
 
-            <img class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
+            <img data-aos="fade-right" class="section-title-background" src="<?php esc_html_e(get_template_directory_uri() . '/assets/title-background.svg', 'caravella'); ?>">
 
-            <h1 class="section-title"><?php pll_e('About<br>Us'); ?></h1>
+            <h1 class="section-title" data-aos="fade-right" data-aos-delay="600"><?php pll_e('About<br>Us'); ?></h1>
 
-            <p><?php pll_e(get_field('about_us_textarea')); ?></p>
+            <p data-aos="fade-left" data-aos-delay="600"><?php pll_e(get_field('about_us_textarea')); ?></p>
 
         </section>
+		<section class="caravella-page-slider-wrapper">
 
-        <div class="swiper-container restaurant-slider">
+			<div data-aos="fade-in" class="swiper-container restaurant-slider">
 
-            <div class="swiper-wrapper">
+				<div class="swiper-wrapper">
 
-                <?php $images = get_field('slider_gallery') ?>
+					<?php $images = get_field('slider_gallery') ?>
 
-                <?php foreach ($images as $image) : ?>
+					<?php foreach ($images as $image) : ?>
 
-                    <div class="swiper-slide">
+						<div class="swiper-slide">
 
-                        <img class="apartment-slider-image" src="<?php echo $image; ?>" alt="slider-image">
+							<img class="apartment-slider-image" src="<?php echo $image; ?>" alt="slider-image">
 
-                    </div>
+						</div>
 
-                <?php endforeach; ?>
+					<?php endforeach; ?>
 
-            </div>
+				</div>
 
-            <!-- Add Pagination -->
-            <div class="swiper-pagination"></div>
+				<!-- Add Pagination -->
+				<div class="swiper-pagination"></div>
 
-            <!-- Add Arrows -->
-            <div class="swiper-button-next"></div>
+				<!-- Add Arrows -->
+				<div class="swiper-button-next"></div>
 
-            <div class="swiper-button-prev"></div>
+				<div class="swiper-button-prev"></div>
 
-        </div>
+			</div>
 
+		</section>
 
-        <section id="about">
+        <section id="about" class="tabs-section-page">
 
             <div class="tabs-section-wrapper">
 
                 <?php echo file_get_contents(get_template_directory_uri() . '/assets/title-background.svg'); ?>
 
-                <h2 class="section-title"><?php pll_e('Minimal<br>Decoration'); ?></h2>
+                <h2 class="section-title" data-aos="fade-up"><?php pll_e('Minimal<br>Decoration'); ?></h2>
 
                 <div>
 
-                    <img class="tabs-image" src="<?php the_field('tabs_image') ?>" alt="About Us Image">
+                    <img data-aos="fade-right" data-aos-delay="300" class="tabs-image" src="<?php the_field('tabs_image') ?>" alt="About Us Image">
 
                 </div>
 
@@ -75,14 +77,14 @@ get_header();
 
                         <?php while (have_rows('tabs')) : the_row(); ?>
 
-                            <h3 data-tab-target="#tab-<?php echo get_row_index(); ?>" class="tab-title">
+                            <h3 data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00" data-tab-target="#tab-<?php echo get_row_index(); ?>" class="tab-title">
                                 <img src="<?php echo get_template_directory_uri() . '/assets/chevron-down.svg' ?>" alt="">
                                 <?php the_sub_field('tab_title'); ?>
                             </h3>
 
                             <div class="tab-content">
 
-                                <p id="tab-<?php echo get_row_index(); ?>" data-tab-content> <?php the_sub_field('tabs_description'); ?> </p>
+                                <p data-aos="fade-up" data-aos-delay="<?php echo get_row_index(); ?>00" id="tab-<?php echo get_row_index(); ?>" data-tab-content> <?php the_sub_field('tabs_description'); ?> </p>
 
                             </div>
                     <?php endwhile;
